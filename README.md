@@ -1,1 +1,2 @@
-# Here is a single model for estimating Chinook salmon vital rates and a simulation exercise to test model identifiability, convergence, and performance. 
+# An example model for estimating Chinook salmon vital rates and a simulation exercise to test model identifiability, convergence, and performance. This model, MLB 4, assumes additive age and cohort/year effects on the complementary log-log scale for exploitation, maturation, and natural mortality rates. 
+# To start open mlb4.r and input the number of data sets (n.data.sets) to fit and number of times to refit each data set using different starting points (n.iter).
