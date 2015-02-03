@@ -1,0 +1,1 @@
+# Here is a single model for estimating Chinook salmon vital rates and a simulation exercise to test model identifiability, convergence, and performance. 
