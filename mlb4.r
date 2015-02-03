@@ -102,7 +102,10 @@ CLLinv <- function(x){
 # ==============================================================================
 # User defined file names and quantities
 
-# Number of data sets to fit - max number = 100 if using stochastic simulated data sets  
+# Number of data sets to fit 
+  # max number = 100 if using stochastic simulated data sets  
+  #            = 1 if using deterministic data set
+
 n.data.sets <- 1 #100
 
 # Number of times to refit the model each time using different starting points
@@ -122,18 +125,20 @@ m5constant <- 1
   
   # Specify the set of generating rates 
   
-  gen.rates <- "CR_tv_GenRates_IGH_Y_no_missBY"
-  
+ gen.rates <- "CR_tv_GenRates_IGH_Y_no_missBY" # This set of generating rate does NOT satisfy model assumptions
+ # gen.rates <- "mu_tv_GenRates_IGH_Y_no_missBY" # This set of generating rates satisfies all model assumptions
+
   # Specify the dataset file (no extension)
 
-  data <- "sim.data.no.missing.cohorts"
-  
+  #data <- "sim.data.no.missing.cohorts" #stochastic data sets
+  data <- "det.data.no.missing.cohorts" #deterministic (noise-free) data sets
+
   # Specify filename of dataset file 
   
   data.fn <- paste( gen.rates, paste(data, ".txt", sep=""), sep="/")
   
   # Specify output file
-  mlb4.fn <-paste(model, ".output.", gen.rates, ".", data, ".", n.iter, "iter", ".txt", sep="")
+  mlb4.fn <-paste(model, ".output.", gen.rates, ".", data, ".txt", sep="")
   
 
 
